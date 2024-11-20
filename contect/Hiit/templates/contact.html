@@ -1,0 +1,277 @@
+{% extends "main.html" %}
+{% block title %}<title>contact</title>{% endblock %}
+<br>
+{% block body %}
+<style>
+    
+ /* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f7f7f7;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+    padding-top: 50px;
+    margin: 0; /* Reset default margin */
+}
+
+.resume {
+    width: 90%; /* Adjusted width for better responsiveness */
+    max-width: 900px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    padding: 40px;
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    top: 20px; /* Adjusted for better alignment */
+    transition: transform 0.3s; /* Smooth transition for hover effect */
+}
+
+.resume:hover {
+    transform: scale(1.02); /* Slight zoom effect on hover */
+}
+
+.left-column {
+    flex: 1;
+    text-align: center;
+    padding-right: 30px;
+}
+
+.profile-image {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 20px;
+    border: 3px solid #53b6bd; /* Border around profile image */
+    transition: transform 0.3s; /* Transition for image hover effect */
+}
+
+.profile-image:hover {
+    transform: scale(1.05); /* Slight zoom effect on hover */
+}
+
+.name {
+    font-size: 2em;
+    color: #333;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.title {
+    font-size: 1.2em;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.contact-info p {
+    font-size: 1.1em;
+    margin: 8px 0;
+    color: #777;
+}
+
+.contact-info a {
+    color: #53b6bd;
+    text-decoration: none;
+}
+
+.contact-info a:hover {
+    text-decoration: underline;
+}
+
+.right-column {
+    flex: 2;
+}
+
+.section-title {
+    font-size: 1.5em;
+    color: #53b6bd;
+    margin-bottom: 10px;
+    border-bottom: 2px solid #53b6bd; /* Underline effect */
+    padding-bottom: 5px; /* Space below the title */
+}
+
+.section {
+    margin-bottom: 25px;
+}
+
+.skills-list {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.skills-list li {
+    background-color: #53b6bd;
+    color: white;
+    padding: 8px 15px;
+    border-radius: 20px;
+    font-size: 0.9em;
+    transition: background-color 0.3s; /* Smooth transition for hover effect */
+}
+
+.skills-list li:hover {
+    background-color: #53b6bd; /* Darker green on hover */
+}
+
+.experience-list,
+.education-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.experience-list li,
+.education-list li {
+    margin-bottom: 20px;
+}
+
+.job-title {
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+.company {
+    font-size: 1.1em;
+    color: #555;
+}
+
+.duration {
+    font-style: italic;
+    color: #777;
+}
+
+.description {
+    color: #555;
+}
+
+.footer {
+    text-align: center;
+    font-size: 0.9em;
+    color: #777;
+    margin-top: 30px;
+}
+
+.footer a {
+    color: #53b6bd;
+    text-decoration: none;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
+
+/* Button Styles */
+.button {
+    display: inline-block;
+    background-color: #53b6bd;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s; /* Transition for button effects */
+}
+
+.button:hover {
+    background-color: #53b6bd; /* Darker green on hover */
+    transform: scale(1.05); /* Slight zoom effect */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .resume {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .left-column {
+        padding-right: 0;
+        margin-bottom: 30px;
+    }
+
+    .right-column {
+        margin-top: 30px;
+    }
+
+    .section-title {
+        font-size: 1.3em;
+    }
+
+    .name {
+        font-size: 1.8em; /* Slightly smaller for mobile */
+    }
+
+    .title {
+        font-size: 1.1em; /* Slightly smaller for mobile */
+    }
+}
+</style>
+
+<body>
+
+    <div class="resume">
+        <!-- Left Column -->
+        <div class="left-column">
+            <div class="name">KHUSHI KAUSHAL</div>
+            <div class="title">FULL STACK DEVELPOER</div>
+            <div class="contact-info">
+                <p>Email: <a href="khushikaushal702@gmail.com">khushikaushal702@gmail.com</a></p>
+                <p>Phone: 91xxxxx702</p>
+                <p>Location: Lalru</p>
+            </div>
+        </div>
+        <!-- Right Column -->
+        <div class="right-column">
+            <!-- Skills Section -->
+            <div class="section">
+                <h1>
+                    <div class="section-title">Skills</div>
+                </h1>
+                <ul class="skills-list">
+                    <li>Basic</li>
+                    <li>HTML</li>
+                    <li>CSS</li>
+                    <li>JavaScript</li>
+                    <li>Bootstrap</li>
+                    <li>Python</li>
+                    <li>Django</li>
+                    <li>Git & GitHub</li>
+                    <li>Responsive Design</li>
+                </ul>
+            </div>
+
+            <!-- Experience Section -->
+            <div class="section">
+                <h1>
+                    <div class="section-title">Experience</div>
+                </h1>
+                <ul class="experience-list">
+                    <li>
+                        <div class="job-title">Frontend Developer</div>
+                        <div class="company">HIIT(HARYANA INSTITUTE OF INFORMATION AND TECHNOLOGY)</div>
+                    </li>
+
+                </ul>
+            </div>
+
+            <!-- Education Section -->
+            <div class="section">
+                <h1>
+                    <div class="section-title">Education</div>
+                </h1>
+                <ul class="education-list">
+                    <li>10TH FROM D.A.V PUBLIC SCHOOL</li>
+                    <li>12TH FROM D.A.V PUBLIC SCHOOL</li>
+                    <li>BACHELOR OF ARTS FROM PUNJAB UNIVERSITY</li>
+                    <li>DIPLOMA IN FULL STACK DEVELOPER FROM HIIT</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    {% endblock %}
